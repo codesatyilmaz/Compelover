@@ -1,0 +1,23 @@
+﻿@model List<Compelover.WEBUI.ViewModels.UserViewModel>
+<section id="userListPage">
+    <div class="container">
+        <div class="row">
+            @foreach (var peopleList in Model)
+            {
+                <div class="content">
+                    <div class="image">
+                        <a asp-route-userId="@peopleList.Id" asp-controller="Member" asp-action="UserProfile">
+                            <img src="@peopleList.Picture" width="62" height="62" alt="" title="@peopleList.UserName Fotoğrafı" style="border-radius: 50%">
+                        </a>
+                    </div>
+                </div>
+            }
+            <div class="explore-button" style="margin-left: 29%">
+                <a asp-controller="User" asp-action="UserList" class="btn btn-outline-primary m-2 btn-sm" title="Kullanıcılar" style="font-family: 'Abril Fatface', cursive;border-radius: 10px;">
+                    <i class="fas fa-space-shuttle fa-2x mr-2"></i><span class="text-white">Keşfet</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

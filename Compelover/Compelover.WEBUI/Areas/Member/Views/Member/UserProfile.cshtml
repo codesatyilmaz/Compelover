@@ -1,0 +1,170 @@
+﻿@using Compelover.Entities.DTOs
+@model UserListDto
+@{
+    Layout = "_MemberLayout";
+}
+<section id="myprofile-area" class="py-5" style="background-color: #fefefe;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="top-value">
+                    <h4 class="text-dark font-weight-bold" style="font-family: 'Oswald', sans-serif;">
+                        @Model.Name @Model.SurName
+                    </h4>
+                    <i class="fas fa-at text-dark mr-2"></i>
+                    <small class="text-dark mr-2">@Model.UserName</small>
+                    <br>
+                    @if (Model.City == null)
+                    {
+                        <i class="fas fa-times mr-3 text-danger"></i>
+                        <span style="font-family: 'IM Fell Double Pica',serif;font-size: small;">Şehir Belirtilmemiş.</span>
+                    }
+                    else
+                    {
+                        <i class="fas fa-map-marked-alt mr-2 text-danger"></i>
+                        <span style="font-family: 'IM Fell Double Pica', serif;">@Model.City</span>
+                    }
+                    <br>
+                    @if (Model.Gender == null)
+                    {
+                        <i class="fas fa-times mr-3 text-danger"></i>
+                        <span style="font-family: 'IM Fell Double Pica',serif;font-size: small;">Cinsiyet Belirtilmemiş.</span>
+                    }
+
+                    else
+                    {
+                        <i class="fas fa-venus-mars mr-2 text-warning"></i>
+                        <span style="font-family: 'IM Fell Double Pica', serif;">@Model.Gender</span>
+                    }
+                    <br>
+                    @if (Model.BirthDay == null)
+                    {
+                        <i class="fas fa-times mr-3 text-danger"></i>
+                        <span style="font-family: 'IM Fell Double Pica',serif;font-size:small;">Doğum Tarihi Belirtilmemiş.</span>
+                    }
+                    else
+                    {
+                        <i class="fas fa-birthday-cake mr-2 text-dark"></i>
+                        <span style="font-family: 'IM Fell Double Pica',serif;">@Model.BirthDay?.ToLongDateString()</span>
+                    }
+                    <br>
+
+                    <i class="fas fa-hourglass-start mr-3 mt-1 text-info"></i>
+                    <span style="font-family: 'IM Fell Double Pica', serif;">@Model.SystemRegistrationDate.Value.ToLongDateString()</span>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                @if (Model.Picture == null)
+                {
+                    <img src="UserPicture/notPhoto.jpg" alt="" title="Fotoğraf Yükleyiniz." class="mb-1" style="border-radius: 50%;" width="128" height="128">
+                }
+                else
+                {
+                    <img src="@Model.Picture" alt="" title="@Model.UserName Kullanıcısı'nın Fotoğrafını Büyüt." class="mb-1" data-toggle="modal" data-target=".img-area-large" style="border-radius: 50%;" width="128" height="128">
+                }
+                <br>
+                @if (User.Identity.Name == Model.UserName)
+                {
+                    <a class="profile-edit btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg">Profili Düzenle</a>
+                }
+                else
+                {
+                    <a class="profile-edit btn-sm">Takip Et</a>
+                }
+            </div>
+
+        </div>
+        <hr class="border-white">
+    </div>
+</section>
+<section id="listOfMyBlog" class="py-5">
+    @* @foreach (var blog in Model) *@
+    @* { *@
+    @*     <h2>@blog.BlogId</h2> *@
+    @* } *@
+</section>
+
+@*PROFİLİ DÜZENLE*@
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <section id="userId" class="py-5">
+                <div class="user-edit-top text-center">
+                    <h4 class="text-dark">Profil Düzenle</h4>
+                    <hr class="border-danger">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="jumbotron" style="border-radius: 30px;">
+                                <div class="jumbotron-body shadow">
+                                    <div class="user-edit-form text-center">
+
+                                        <form method="post" asp-area="Member" asp-action="UserEdit" enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <i class="far fa-user mr-2 text-danger fa-2x"></i> <input type="text" asp-for="@Model.UserName" class="user-edit-input text-center">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <input type="email" asp-for="@Model.Email" class="user-edit-input text-center"><i class="far fa-envelope-open ml-2 fa-2x text-danger"></i>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <i class="fas fa-user-circle mr-2 text-danger fa-2x"></i>
+                                                <input type="file" class="user-edit-input text-center" name="userPicture">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <input type="tel" asp-for="@Model.PhoneNumber" class="user-edit-input text-center"><i class="fas fa-mobile text-danger ml-2 fa-2x"></i>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <i class="fas fa-map-pin mr-2 fa-2x text-danger"></i> <input type="text" asp-for="@Model.City" class="user-edit-input text-center">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <input type="date" asp-for="@Model.BirthDay" class="user-edit-input text-center"><i class="fas fa-birthday-cake ml-2 fa-2x text-danger"></i>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <i class="fas fa-venus-mars mr-2 fa-2x text-danger"></i> <input type="text" asp-for="@Model.Gender" class="user-edit-input text-center">
+                                            </div>
+                                            <br>
+                                            <div class="change-user-button">
+                                                <input type="submit" class="btn btn-outline-secondary btn-block update-user-button" value="Bilgilerini Kaydet">
+                                                <a asp-controller="Member" asp-action="PasswordChange" class="btn btn-outline-secondary btn-block update-user-button mt-2">Şifreni Değiştir</a>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+@*PROFİLİ DÜZENLE*@
+@*----------------------------------------*@
+@*FOTOĞRAF BÜYÜTMEK İÇİN*@
+<div class="modal fade img-area-large" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="content text-center">
+                <img src="@Model.Picture" class="img-fluid text-center" width="450" height="450" alt="">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+@*FOTOĞRAF BÜYÜTMEK İÇİN*@

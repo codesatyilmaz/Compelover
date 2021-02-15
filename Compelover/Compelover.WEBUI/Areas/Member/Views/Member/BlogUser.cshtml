@@ -1,0 +1,47 @@
+﻿@model System.Collections.Generic.List<Compelover.Entities.DTOs.BlogDto>
+@{
+    Layout = "_MemberLayout";
+}
+<div class="container">
+    @foreach (var userName in Model)
+    {
+        <h1 style="font-family: 'Libre Baskerville', serif;" class="text-white text-center mb-3 mt-4">@userName.AppUserId 'ın Yazmış olduğu yazılar</h1>
+        break;
+    }
+    <hr class="bg-pink mt-5">
+    <div class="card-columns">
+        @foreach (var listblog in Model)
+        {
+            <div class="card border-0">
+                <img src="@listblog.ImageBlog" class="card-img-top" alt="">
+                <a asp-route-userId="@listblog.AppUserId" asp-controller="Member" asp-action="BlogUser">
+                    <small class="bg-secondary float-left text-white mt-4" style="font-size: 0.69rem;">@listblog.AppUserId</small>
+                </a>
+                <small class="bg-turquoise float-right text-white mt-4" style="font-size: 0.69rem;">@listblog.PostedTime.ToLongDateString()</small>
+                <small class="float-right" style="margin-right: -17%;">
+                    <a class="twitter-share-button mr-1" title="Twitter'da Paylaş" data-lang="tr" data-via="www.compelover.com" href="https://twitter.com/intent/tweet?text=@listblog.Title by @@@listblog.AppUserId www.compelover.com" _fcksavedurl="https://twitter.com/intent/tweet?text=Paylas" data-size="large">
+                        <i class="fab fa-twitter text-info text-white"></i>
+                    </a>
+                    <a class="facebook-share-button" title="Facebook'ta Paylaş" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=&p[images][0]=&p[title]=&p[summary]=" onclick_fckprotectedatt="%20onclick%3D%22%0A%0A%20%20%20%20window.open(%0A%0A%20%20%20%20%20%20'https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3D'%2BencodeURIComponent(location.href)%2C%20%0A%0A%20%20%20%20%20%20'facebook-share-dialog'%2C%20%0A%0A%20%20%20%20%20%20'width%3D626%2Cheight%3D436')%3B%20%0A%0A%20%20%20%20return%20false%3B%22">
+                        <i class="fab fa-facebook-f text-info"></i>
+                    </a>
+                </small>
+                <div class="card-body mr-5 bg-dark text-white text-center">
+                    <h5 style="font-family: 'Bebas Neue', cursive;">
+                        @listblog.Title
+                    </h5>
+                    <p style="font-family: 'Pathway Gothic One', sans-serif;">@listblog.ShortDescription</p>
+                    @if (@listblog.Description.Length > 2000)
+                    {
+                        <small style="font-family: 'Roboto', sans-serif;">Yazını'nın Tamamını Okumak için İnceleye <small class="bg-pink">Tıklayınız.</small></small>
+                    }
+                    else
+                    {
+                        <small>@listblog.Description</small>
+                    }
+                    <a asp-route-BlogId="@listblog.BlogId" asp-controller="Blog" asp-action="BlogContinuation" class="btn btn-outline-secondary text-white btn-block" style="font-family: 'Oswald', sans-serif;">Tamamı</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Esaty\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.8.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageFolders)))" />
+  </ItemGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\0e17a611-6c96-4923-9b4f-919a94b3e0b0.jpg" Condition="Exists('$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\0e17a611-6c96-4923-9b4f-919a94b3e0b0.jpg')">
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <NuGetPackageVersion>5.0.0-alpha1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>wwwroot\UserPicture\0e17a611-6c96-4923-9b4f-919a94b3e0b0.jpg</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\38b09d9d-a9f7-45e9-8fe4-97071ca9fd82.jpg" Condition="Exists('$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\38b09d9d-a9f7-45e9-8fe4-97071ca9fd82.jpg')">
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <NuGetPackageVersion>5.0.0-alpha1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>wwwroot\UserPicture\38b09d9d-a9f7-45e9-8fe4-97071ca9fd82.jpg</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\fb0465e0-af4c-4302-89d0-0c43bbeb8b78.jpg" Condition="Exists('$(NuGetPackageRoot)bootstrap\5.0.0-alpha1\contentFiles\any\any\wwwroot\UserPicture\fb0465e0-af4c-4302-89d0-0c43bbeb8b78.jpg')">
+      <NuGetPackageId>bootstrap</NuGetPackageId>
+      <NuGetPackageVersion>5.0.0-alpha1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>wwwroot\UserPicture\fb0465e0-af4c-4302-89d0-0c43bbeb8b78.jpg</Link>
+    </Content>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\5.0.0-preview.8.20407.4\build\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\5.0.0-preview.8.20407.4\build\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Esaty\.nuget\packages\newtonsoft.json\10.0.1</PkgNewtonsoft_Json>
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Esaty\.nuget\packages\microsoft.entityframeworkcore.tools\5.0.0-preview.8.20407.4</PkgMicrosoft_EntityFrameworkCore_Tools>
+  </PropertyGroup>
+</Project>

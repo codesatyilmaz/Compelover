@@ -1,0 +1,64 @@
+﻿@model Compelover.WEBUI.ViewModels.UserViewModel
+
+@{
+    Layout = "_OpeningLayout";
+}
+<section id="signUp" class="py-5">
+    <div class="top-value" style="margin-left: 15rem;">
+        <h4 class="text-dark">Hesabınızı <span class="bg-turquoise text-white">Oluşturunuz.</span></h4>
+        <span class="mr-5" style="font-family: 'Fjalla One', sans-serif;">Kolayca Hemen <span class="bg-pink text-white">Hesabınızı</span> Olusturabilirsiniz.</span>
+        <hr class="bg-turquoise">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body shadow">
+                        <form method="post" asp-controller="Home" asp-action="SignUp">
+                           <div class="form-group">
+                                <input asp-for="@Model.Name" type="text" class="login-input text-center" placeholder="Adınız">
+                                <br>
+                                <span asp-validation-for="Name" class="bg-turquoise text-white" style="font-family: 'Lekton',sans-serif"></span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input asp-for="@Model.SurName" type="text" class="login-input text-center" placeholder="Soyadınız">
+                                <br>
+                                <span asp-validation-for="SurName" class="bg-turquoise text-white" style="font-family: 'Lekton',sans-serif"></span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input asp-for="@Model.UserName" type="text" class="login-input text-center" placeholder="Kullanıcı Adınız">
+                                <br>
+                                <span asp-validation-for="UserName" class="bg-pink text-white" style="font-family: 'Lekton', sans-serif;"></span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input asp-for="@Model.PhoneNumber" type="number" class="login-input text-center" placeholder="Telefon Numarası">
+                                <br>
+                                <span asp-validation-for="PhoneNumber" class="bg-turquoise text-white" style="font-family: 'Lekton', sans-serif;"></span>
+
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input asp-for="@Model.Email" type="email" class="login-input text-center" placeholder="E-Mail">
+                                <br>
+                                <span asp-validation-for="Email" class="bg-turquoise text-white " style="font-family: 'Lekton', sans-serif;"></span>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input asp-for="@Model.Password" type="password" class="login-input text-center" placeholder="Şifre">
+                                <br>
+                                <span asp-validation-for="Password" class="bg-pink text-white" style="font-family: 'Lekton', sans-serif;"></span>
+                            </div>
+                            <div class="button-value offset-4 text-center">
+                                <input type="submit" class="signup-button" value="Kaydol">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,359 @@
+﻿
+#myprofile-area {
+    background-color: #258c7f;
+}
+
+#memberPage {
+    background-image: url("/Compelover.WEBUI/wwwroot/IndexPicture/b2ü.jpeg");
+}
+
+.input-area {
+    color: darkgrey !important;
+    border-radius: 5px;
+    border: 2px solid rgb(56, 61, 63);
+    background-color: #181a1b;
+    width: 75%;
+    opacity: inherit;
+    padding-bottom: 13px;
+    font-size: 1.30rem;
+    font-family: "Bodoni MT Black", sans-serif;
+    letter-spacing: 1px;
+}
+
+.user-edit-input {
+    color: #1b1e21 !important;
+    border-radius: 5px;
+    border: 2px solid rgb(56, 61, 63);
+    background-color: #e9ecef;
+    width: 75%;
+    opacity: inherit;
+    padding-bottom: 13px;
+    font-size: 1.30rem;
+    font-family: "Bodoni MT Black", sans-serif;
+    letter-spacing: 1px;
+}
+
+.login-input {
+    color: #1b1e21 !important;
+    border-radius: 5px;
+    border: 2px solid rgb(56, 61, 63);
+    background-color: #fefefe;
+    width: 75%;
+    padding-bottom: 13px;
+    font-family: "Bookman Old Style", serif;
+}
+
+#passwordChange .password-reset-input {
+    color: #fefefe;
+    border-radius: 5px;
+    border: 2px solid rgb(56, 61, 63);
+    background-color: #16a085;
+    width: 75%;
+    padding-bottom: 13px;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h4 {
+    color: #95999c;
+    letter-spacing: 2px;
+    font-family: "Georgia", cursive;
+    font-weight: bold;
+}
+
+.card-are {
+    border-radius: 10px;
+    box-sizing: content-box;
+    width: 300px;
+    height: 400px;
+    padding: 45px;
+    border: 1px dotted #736b5e;
+}
+
+.bg-turquoise {
+    background-color: #258c7f;
+}
+
+.bg-pink {
+    background-color: palevioletred;
+}
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3.20rem;
+}
+
+
+b {
+    font-size: 1.48rem;
+}
+
+
+.bottom-login-value {
+    border: 2px solid #16a085;
+    padding: 1rem;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+}
+
+/*ANİMASYON*/
+.img-area {
+
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.img-area:hover {
+    transform: translate(-50px, -100px);
+    -webkit-transform: translate(-50px, -100px);
+}
+
+.btn-getstarted {
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-getstarted:hover {
+    transform: rotate(360deg) scale(.5);
+    -webkit-transform: rotate(360deg) scale(.5);
+    background-color: palevioletred;
+}
+
+.btn-outline-primary {
+
+    transition: all 1s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    transform: rotate(360deg) scale(.5);
+    -webkit-transform: rotate(360deg) scale(.5);
+    background-color: violet;
+
+}
+
+.btn-outline-warning {
+    transition: all .5s ease-in-out;
+}
+
+.btn-outline-warning:hover {
+    transform: skew(-45deg, 45deg);
+    -webkit-transform: skew(-45deg, 45deg);
+}
+
+
+.btn-purple {
+    transition: all .5s ease-in-out;
+}
+
+.btn-purple:hover {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+/*ANİMASYON*/
+/*---------------------------------*/
+/*BUTONLAR*/
+.btn-getstarted {
+    background-color: #808080;
+    border: #808080;
+    font-size: 1.40rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    padding: 1rem 80px 1rem 80px;
+}
+
+.update-user-button {
+    border-radius: 20px;
+    color: #1b1e21;
+    font-family: "Rockwell Condensed", serif;
+    font-size: 1.40rem;
+    letter-spacing: 1px;
+}
+
+.btn-turquoise {
+    border-radius: 40px;
+    background-color: #16a085;
+    border: #16a085;;
+    color: #f8f9fa;
+    height: 2.30rem;
+    font-family: "Bauhaus 93", serif;
+    font-size: 1.40rem;
+    letter-spacing: 1px;
+}
+
+
+#myprofile-area .user-edit-button {
+    color: #f8f9fa;
+}
+
+#signUp .signup-button {
+    border-radius: 40px;
+    background-color: #16a085;
+    border: #16a085;;
+    color: #f8f9fa;
+    font-family: "Berlin Sans FB", serif;
+    font-size: 1.16rem;
+    letter-spacing: 1px;
+    padding: .50rem 50px .50rem 50px;
+
+}
+
+#passwordResetPage .reset-password-button {
+    border-radius: 40px;
+    background-color: #16a085;
+    border: #16a085;;
+    color: #f8f9fa;
+    font-family: "Rockwell", serif;
+    font-size: 1.16rem;
+    letter-spacing: 1px;
+    padding: .30rem 40px .30rem 40px;
+}
+
+#myprofile-area .profile-edit {
+    border-radius: 35px;
+    background-color: #16a085;
+    border: 1px dashed lightcoral;
+    color: #fefefe;
+    font-family: "Rockwell", serif;
+    font-size: 0.86rem;
+    letter-spacing: 1px;
+    padding: .30rem 20px .30rem 20px;
+    cursor: pointer;
+}
+
+#description .btn-purple {
+    border-radius: 35px;
+    background-color: purple;
+    border: purple;
+    color: #fefefe;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.98rem;
+    letter-spacing: 1px;
+    padding: .55rem 30px .55rem 30px;
+
+
+}
+
+/*BUTONLAR*/
+small {
+    font-family: 'Voltaire', sans-serif;
+
+}
+
+/*****************************************/
+/*İKONLAR*/
+
+.fa-connectdevelop:hover, .fa-barcode:hover, .fa-contao:hover {
+    color: #16181b !important;
+}
+
+/*İKONLAR*/
+
+#blogPostAdd .title-input {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    font-family: 'Bungee Shade', cursive;
+    letter-spacing: 2px;
+    font-size: 2.0rem;
+    color: #16a085;
+    border-top: 1px solid #343a40;
+    border-bottom: 1px solid #343a40;
+}
+
+#blogPostAdd .short-input {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    letter-spacing: 1px;
+    font-size: 1.10rem;
+    color: #fefefe;
+    font-family: 'BioRhyme', serif;
+    border-top: 1px solid #343a40;
+    border-bottom: 1px solid #343a40;
+    width: 100%;
+}
+
+#blogPostAdd .description-area {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    letter-spacing: 1px;
+    font-size: 1.13rem;
+    color: #fefefe;
+    font-family: 'Hepta Slab', serif;
+    line-height: 1.6em;
+    overflow: hidden;
+}
+
+
+input[type="file"] {
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+    letter-spacing: 1px;
+    font-size: 0.99rem;
+    color: #fefefe;
+    font-family: 'Hepta Slab', serif;
+}
+
+
+/*body {*/
+/*    padding: 20px;*/
+/*}*/
+input:focus {
+    outline: 0;
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+textarea {
+    resize: none;
+    width: 60em;
+    height: 60em;
+}
+
+
+.search-input-value:focus {
+    outline: 0;
+}
+
+.search-input-value {
+    background-color: #343a40;
+    color: #fefefe;
+    border: 1px solid #16a085;
+    /*border-bottom-color: #721c24;*/
+    font-family: 'Kite One', sans-serif;
+    border-radius: 9px;
+    font-size: 1.3rem;
+    width: 30px;
+    height: 30px;
+    text-shadow: 1px 1px 4px white;
+    box-shadow: 1px 1px 4px #16a085;
+
+
+}
+
+#description .search-value {
+    border-radius: 35px;
+    background-color: #16a085;
+    border: 1px dashed lightcoral;
+    color: #fefefe;
+    font-family: "Rockwell", serif;
+    font-size: 0.86rem;
+    letter-spacing: 1px;
+    padding: .30rem 20px .30rem 20px;
+    cursor: pointer;
+}
+
+.search-input-value::placeholder {
+    color: #fefefe;
+}
+
+#description .categories {
+    border: 1px solid #fff3cd;
+    display: flex;
+}

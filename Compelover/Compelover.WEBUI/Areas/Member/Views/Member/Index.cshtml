@@ -1,0 +1,67 @@
+﻿@model Compelover.WEBUI.ViewModels.UserViewModel
+@{
+    Layout = "_MemberLayout";
+}
+
+@await Component.InvokeAsync("Dropdown")
+
+<form method="post" asp-controller="User" asp-action="UserList">
+
+    <section id="memberPage" class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="items text-center text-white">
+                        <small class="text-white" style="letter-spacing: 2px;">HOŞ GELDİN</small>
+                        <br>
+                        <span style="font-family: 'Anton', sans-serif;font-size: 2.60rem; letter-spacing: 2px;">
+                            <a asp-route-userId="@Model.Id" asp-controller="Member" asp-action="UserProfile" style="text-decoration: none;color: #fefefe;">
+                                @Model.Name.ToUpper() @Model.SurName.ToUpper()
+                            </a>
+                        </span>
+                        <br>
+                    </div>
+                    <div class="buttons text-center mt-2">
+                        <a class="btn btn-outline-light btn-sm" style="font-family: 'Abril Fatface', cursive;border-radius: 10px;" title="Blog Post'u Yaz" asp-controller="Blog" asp-action="BlogPostAdd">
+                            <i class="fab fa-steam-symbol fa-2x mr-2"></i>Bloğ'unu paylaş
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="description" class="py-5 text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="prg-text text-white">
+                        <span style="font-family: 'Yanone Kaffeesatz', sans-serif;font-size: 2.28rem;">
+                            İnsanları keşfedip, & <span class="bg-turquoise text-white">yazılarını</span> okuyabilirsiniz!
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="text" id="searchedUser" name="searchedUser" class="search-input-value text-center mr-1" placeholder="Kullanıcı Ara">
+                        <div class="search-button">
+                            <i class="fas fa-search">
+                                <input type="submit" value="Ara" class="search-value btn-sm">
+                            </i>
+                        </div>
+                    </div>
+                    <hr>
+                    @await Component.InvokeAsync("UserList")
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="areaThree" class="mt-4" style="background-color: #4e555b">
+        <div class="list-blog-page mt-4">
+            @await Component.InvokeAsync("ListOfAllBlogPost")
+
+        </div>
+    </section>
+</form>

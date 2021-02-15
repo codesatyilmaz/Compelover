@@ -1,0 +1,39 @@
+﻿@model Compelover.Entities.DTOs.BlogDto
+
+@{
+    Layout = "_MemberLayout";
+}
+
+<section id="blogPostAdd" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form method="post" asp-controller="Blog" asp-action="BlogPostAdd" enctype="multipart/form-data">
+                    <input type="submit" id="puplishBlogButton" disabled="disabled" value="Yayınla" class="btn btn-secondary btn-block" style="margin-left: 150%;font-family: 'Oswald', sans-serif;" onclick="return confirm('Blogunuz başarılı bir şekil de yayınlandı.')">
+                    <input type="hidden" value="@User.Identity.Name" asp-for="@Model.AppUserId">
+                    <div class="form-group">
+                        <input type="text" asp-for="@Model.Title" class="title-input" placeholder="Başlık">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" asp-for="@Model.ShortDescription" class="short-input" placeholder="Kısa bir açıklama">
+                    </div>
+                    <br>
+                    <div class="file-field">
+                        <div class="btn btn-outline-secondary btn-sm float-left">
+                            <span class="text-white" style="font-family: 'Oswald', sans-serif;letter-spacing: 1px;">Yazınız için Fotoğraf <span class="bg-turquoise">Yükleyin.</span></span>
+                            <input type="file" class="user-edit-input text-center" name="blogPicture">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group" style="margin-left: -105%;margin-top: 100px;">
+                        <textarea  id="textareaBlog" class="description-area" placeholder="Senin Dünyan"  asp-for="@Model.Description"></textarea>
+                    </div>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</section>

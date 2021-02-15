@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CCSSFILE_005CSTYLEE_002ECSS/@EntryIndexedValue">wwwroot\CssFile\Stylee.css</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CJS_005CJQUERY_002D3_002E5_002E1_002EMIN_002EJS/@EntryIndexedValue">wwwroot\js\jquery-3.5.1.min.js</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005CUSERFILES/@EntryIndexedValue">wwwroot\UserFiles</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/IgnoredPaths/=WWWROOT_005C_005BSCRIPT_0020PATH_005D/@EntryIndexedValue">wwwroot\[script path]</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/MappedPaths/=WWWROOT_005C_005BSTYLE_0020PATH_005D_005CSIMDITOR_002ECSS/@EntryIndexedValue"></s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CCSSFILE_005CSTYLEE_002ECSS/@EntryIndexedValue">wwwroot\CssFile\Stylee.css</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CJS_005CJQUERY_002D3_002E5_002E1_002EMIN_002EJS/@EntryIndexedValue">wwwroot\js\jquery-3.5.1.min.js</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005CUSERFILES/@EntryIndexedValue">wwwroot\UserFiles</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005C_005BSCRIPT_0020PATH_005D/@EntryIndexedValue">wwwroot\[script path]</s:String>
+	<s:String x:Key="/Default/CodeInspection/WebPathMapping/PathsInCorrectCasing/=WWWROOT_005C_005BSTYLE_0020PATH_005D_005CSIMDITOR_002ECSS/@EntryIndexedValue">wwwroot\[style path]\simditor.css</s:String></wpf:ResourceDictionary>

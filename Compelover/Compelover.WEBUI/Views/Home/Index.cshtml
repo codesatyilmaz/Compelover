@@ -1,0 +1,97 @@
+﻿@model Compelover.WEBUI.ViewModels.LoginViewModel
+
+@{
+    Layout = "_OpeningLayout";
+}
+
+<section id="homeCompelover" class="py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="items text-center">
+                    <h2 class="text-dark text-center">Okuyun,yazın,keşfedin <br>zihniniz, <span class="bg-turquoise text-white">Doruklar'a Ulaşsın!</span></h2>
+                    <div class="button text-center mt-5">
+                        <a asp-controller="Home" asp-action="Login" class="btn-getstarted" style="text-decoration: none;color: #fefefe;" data-toggle="modal" data-target=".bd-example-modal-lg">Giriş</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*ALAN2*@
+<section id="area-Two" class="py-5" style="background-color: #1b1e21">
+    <div class="container">
+        <div class="text text-center">
+            <h3 class="text-white" style="font-family: 'Playfair Display', serif;">Uzman Olduğun <span class="bg-turquoise">Alanlar'da</span> Dilediğince Yaz.<i style="color: pink;" class="fas fa-feather-alt ml-1"></i></h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img id="#imgValue" src="UserFiles/cafe.jpg" class="img-fluid img-area" alt="" style="border-radius: 30%;">
+            </div>
+            <div class="col-md-8">
+                <h3 class="text-white" style="font-family: 'Balsamiq Sans', cursive;">“İstediğin her yerde <span class="bg-turquoise">bazen küçük bir kafede</span> hayatın her anın'da <strong class="text-danger">senin için.</strong>”<i style="color: pink" class="far fa-heart ml-1"></i></h3>
+                <br>
+                <h3 class="text-white" style="font-family: 'Indie Flower', cursive;">•Hemen Hemen Her <span class="bg-turquoise">Konuda</span> Yeni Makaleler Oku.</h3>
+                <br>
+                <h3 class="text-white" style="font-family: 'Indie Flower',cursive">•<span class="bg-turquoise">Arastır</span> ve Ögren,Bildiklerini Paylas.</h3>
+                <br>
+                <h3 class="text-white" style="font-family: 'Indie Flower',cursive">•<span>Okumak Çok <span class="bg-pink">Keyifli</span> Olacak.</span></h3>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <div class="blog-list">
+       
+    </div>
+</section>
+@*ALAN2*@
+@*MODAL*@
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 50%;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <section id="login-page" style="background-color: #fefefe;border-radius: 30%;">
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <h4 class="text-dark"><span class="bg-turquoise text-white">Üye G</span>irişi</h4>
+                            <hr class="border-secondary">
+                            <div class="login-form text-center">
+                                <div class="card-are">
+                                    <form method="post" asp-controller="Home" asp-action="Login">
+                                        <div asp-validation-summary="ModelOnly" class="badge badge-danger small"></div>
+                                        <div class="form-group">
+                                            <input type="email" asp-for="@Model.Email" class="login-input text-center" placeholder="E-Mail Adresiniz">
+                                        </div>
+                                        <br>
+                                        <div class="form-group">
+                                            <input type="password" asp-for="@Model.Password" class="login-input text-center" placeholder="Şifreniz">
+                                        </div>
+                                        <br>
+                                        <div class="buttons">
+                                            <div class="button-login">
+                                                <input type="submit" class="btn-turquoise btn-block" value="Giris">
+                                            </div>
+                                            <div class="signup-button mt-3 float-right mr-5">
+                                                <a asp-controller="Home" asp-action="SignUp" class="bottom-login-value" style="color: #1b1e21;text-decoration: none;">Kayıt Ol</a>
+                                            </div>
+                                            <div class="reset-password  mt-3 float-left ml-5">
+                                                <a asp-controller="Home" asp-action="PasswordReset" class="bottom-login-value" style="color: #1b1e21;text-decoration: none;">Şifremi Unuttum</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+@*MODAL*@

@@ -1,0 +1,42 @@
+﻿@model System.Collections.Generic.List<Compelover.Entities.Tangible.AppUser>
+
+@{
+    Layout = "_MemberLayout";
+}
+
+@if (Model.Count > 0)
+{
+    <section id="userListPage" class="py-5">
+        <div class="container">
+            <div class="row">
+                @foreach (var listPeople in Model)
+                {
+                    <div class="content">
+                        <div class="col-md-6">
+                            <div class="image">
+                                <img src="@listPeople.Picture" width="62" height="62" alt="" title="@listPeople.UserName Fotoğrafı" style="border-radius: 50%">
+                            </div>
+                        </div>
+                        <div class="col-md-6 offset-2" style="margin-top: -5%;">
+                            <div class="name-surname text-white">
+                                <h6 style="font-family: 'Fjalla One', sans-serif;">@listPeople.Name @listPeople.SurName</h6>
+                            </div>
+                            <div class="username">
+                                <a asp-route-userId="@listPeople.Id" asp-controller="Member" asp-action="UserProfile" style="text-decoration: none;color: #fefefe;">
+                                    <small class="bg-turquoise" style="border-radius: 7px;">@@@listPeople.UserName</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <div class="user-not-found text-center mt-5">
+        <h6 style="font-family: 'Fjalla One', sans-serif;color: floralwhite">Böyle bir kullanıcı bulunamadı.</h6>
+    </div>
+}

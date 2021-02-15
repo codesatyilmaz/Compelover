@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$USER_HOME$/.nuget/packages/bootstrap/5.0.0-alpha1/contentFiles/any/any/wwwroot/UserPicture/0e17a611-6c96-4923-9b4f-919a94b3e0b0.jpg" libraries="{jquery-3.5.1, summernote}" />
+    <file url="file://$USER_HOME$/.nuget/packages/bootstrap/5.0.0-alpha1/contentFiles/any/any/wwwroot/UserPicture/38b09d9d-a9f7-45e9-8fe4-97071ca9fd82.jpg" libraries="{jquery-3.5.1, summernote}" />
+    <file url="file://$USER_HOME$/.nuget/packages/bootstrap/5.0.0-alpha1/contentFiles/any/any/wwwroot/UserPicture/fb0465e0-af4c-4302-89d0-0c43bbeb8b78.jpg" libraries="{jquery-3.5.1, summernote}" />
+    <file url="file://$PROJECT_DIR$" libraries="{jquery-3.5.1, summernote}" />
+  </component>
+</project>
